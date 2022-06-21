@@ -1,0 +1,16 @@
+{
+  "port": {
+    "doc": "port for server",
+    "format": "int",
+    "default": 3200,
+    "env": "SERVER_PORT",
+    "arg": "port"
+  },
+  "protocol": {
+    "doc": "http or https",
+    "format": ["http", "https"],
+    "default": "http",
+    "env": "SERVER_PROTOCOL",
+    "arg": "protocol"
+  }
+}

@@ -1,0 +1,109 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "One.com Application",
+        "description": " Test Application API"
+    },
+    "host": "localhost:3200",
+    "basePath": "/api",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/users": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get Users ",
+                "description": "Get Users",
+                "security": [
+                    {
+                        "apiKey": []
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Users found successfully.",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/{id}": {
+            "delete": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Delete User ",
+                "description": "Delete User",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "UserId",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "security": [
+                    {
+                        "apiKey": []
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Users deleted successfully.",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "securityDefinitions": {
+        "apiKey": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "Authorization",
+            "template": "Bearer {apiKey}"
+        }
+    },
+    "definitions": {
+        "User": {
+            "properties": {
+                "username": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "email": {
+                    "type": "string",
+                    "required": "true",
+                    "unique":"true"
+                },
+                "password": {
+                    "type": "string",
+                    "required": "true"
+                }
+            }
+        }
+    }
+}

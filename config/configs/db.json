@@ -1,0 +1,40 @@
+{
+  "db_client": {
+    "doc": "name of db client",
+    "default": "mongodb",
+    "env": "DB_CLIENT",
+    "arg": "db_client"
+  },
+  "db_name": {
+    "doc": "name of the database",
+    "default": "tutor_bin",
+    "env": "DB_NAME",
+    "arg": "db_name"
+  },
+  "db_nodes": {
+    "doc": "db hosts and ports in format (IP1:PORT1, IP2:PORT2, ...)",
+    "default": "10.25.61.243",
+    "env": "DB_NODES",
+    "arg": "db_nodes"
+  },
+  "db_user": {
+    "doc": "username for db authentication",
+    "format": "String",
+    "default": "",
+    "env": "DB_USER",
+    "arg": "db_user"
+  },
+  "db_password": {
+    "doc": "password for db authentication",
+    "format": "String",
+    "default": "",
+    "env": "DB_PASSWORD",
+    "arg": "db_password"
+  },
+  "db_authentication_required": {
+    "doc": "db_authentication_required",
+    "default": false,
+    "env": "DB_AUTHENTICATION_REQUIRED",
+    "arg": "db_authentication_required"
+  }
+}

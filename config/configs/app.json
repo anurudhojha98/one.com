@@ -1,0 +1,32 @@
+{
+  "name": {
+    "doc": "name of this app",
+    "default": "Custom Admin Service",
+    "env": "APP_NAME",
+    "arg": "app_name"
+  },
+  "version": {
+    "doc": "webservice version",
+    "default": "1.0.0",
+    "env": "WEBSERVICE_VERSION",
+    "arg": "version"
+  },
+  "host": {
+    "doc": "host url",
+    "default": "http://localhost/",
+    "env": "SERVER_HOST",
+    "arg": "server_host"
+  },
+  "baseURL": {
+    "doc": "base url for apis",
+    "default": "http://localhost/",
+    "env": "SERVER_BASE_URL",
+    "arg": "base_URL"
+  },
+  "clientDomain": {
+    "doc": "client domain for froentend, can provide multiple domains by providing comma seprated string",
+    "default": "*",
+    "env": "CLIENT_DOMAIN",
+    "arg": "client_domain"
+  }
+}
